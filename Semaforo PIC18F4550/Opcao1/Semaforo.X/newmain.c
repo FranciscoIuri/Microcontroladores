@@ -7,11 +7,11 @@
 #define SEMAFORO PORTD //porta de entrada no processador (porta D)
 
 //sequência a ser seguida
-#define VERDE1 0b00100001
-#define AMARELO1 0b00010001
-#define VERMELHOTOTAL 0b00001001
-#define VERDE2 0b00001100
-#define AMARELO2 0b00001010
+#define VERDE1 0b0001001100
+#define AMARELO1 0b0001001010
+#define VERMELHOTOTAL 0b0001001001
+#define VERDE2 0b0001100001
+#define AMARELO2 0b0001010001
 
 
 

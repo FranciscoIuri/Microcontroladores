@@ -1,23 +1,28 @@
 MPLINK 4.48, Linker
-Linker Map File - Created Sat Mar 07 19:00:25 2020
+Linker Map File - Created Sat Mar 07 18:54:40 2020
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
                 ---------  ---------  ---------  ---------  ---------
                _entry_scn       code   0x000000    program   0x000006
                    .cinit    romdata   0x000006    program   0x000002
-          .code_newmain.o       code   0x000008    program   0x0000dc
-               _cinit_scn       code   0x0000e4    program   0x00009e
-                    .code       code   0x000182    program   0x000020
-             _startup_scn       code   0x0001a2    program   0x00001c
-           .code___init.o       code   0x0001be    program   0x000002
-         .idata_c018i.o_i    romdata   0x0001c0    program   0x000000
-         .romdata_c018i.o    romdata   0x0001c0    program   0x000000
-            .code_c018i.o       code   0x0001c0    program   0x000000
-       .idata_newmain.o_i    romdata   0x0001c0    program   0x000000
-       .romdata_newmain.o    romdata   0x0001c0    program   0x000000
-        .idata___init.o_i    romdata   0x0001c0    program   0x000000
-        .romdata___init.o    romdata   0x0001c0    program   0x000000
+                    int_h       code   0x000008    program   0x0001ca
+               _cinit_scn       code   0x0001d2    program   0x00009e
+                    .code       code   0x000270    program   0x000020
+             _startup_scn       code   0x000290    program   0x00001c
+           .code___init.o       code   0x0002ac    program   0x000002
+            .code_c018i.o       code   0x0002ae    program   0x000000
+       .idata_newmain.o_i    romdata   0x0002ae    program   0x000000
+       .romdata_newmain.o    romdata   0x0002ae    program   0x000000
+          .code_newmain.o       code   0x0002ae    program   0x000000
+         .romdata_c018i.o    romdata   0x0002ae    program   0x000000
+        .idata___init.o_i    romdata   0x0002ae    program   0x000000
+        .romdata___init.o    romdata   0x0002ae    program   0x000000
+         .idata_c018i.o_i    romdata   0x0002ae    program   0x000000
+ .config_300002_newmain.o    romdata   0x300002    program   0x000001
+ .config_300003_newmain.o    romdata   0x300003    program   0x000001
+ .config_300005_newmain.o    romdata   0x300005    program   0x000001
+ .config_300006_newmain.o    romdata   0x300006    program   0x000001
                 MATH_DATA      udata   0x000000       data   0x000002
                  .tmpdata      udata   0x000002       data   0x000000
            .udata_c018i.o      udata   0x000060       data   0x00000a
@@ -34,41 +39,48 @@ Linker Map File - Created Sat Mar 07 19:00:25 2020
                               Program Memory Usage 
                                Start         End      
                            ---------   ---------      
-                            0x000000    0x0001bf      
-            448 out of 33048 program addresses used, program memory utilization is 1%
+                            0x000000    0x0002ad      
+                            0x300002    0x300003      
+                            0x300005    0x300006      
+            690 out of 33048 program addresses used, program memory utilization is 2%
 
 
 
                               Symbols - Sorted by Name
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-          ___for_lbl00004   0x0000c4    program     static                          
-          ___for_lbl00005   0x0000d0    program     static                          
-          ___for_lbl00006   0x0000b4    program     static                          
-          ___for_lbl00007   0x0000be    program     static                          
-          ___for_lbl00008   0x00009a    program     static                          
-          ___for_lbl00009   0x000084    program     static                          
+          ___for_lbl00005   0x0001b2    program     static                          
+          ___for_lbl00006   0x0001be    program     static                          
+          ___for_lbl00007   0x0001a2    program     static                          
+          ___for_lbl00008   0x0001ac    program     static                          
+          ___for_lbl00009   0x000188    program     static                          
+          ___for_lbl00010   0x000172    program     static                          
        ___return_lbl00000   0x000004    program     static                          
-       ___return_lbl00001   0x0001bc    program     static                          
-       ___return_lbl00002   0x000180    program     static                          
-       ___return_lbl00003   0x0000d0    program     static                          
-                   __init   0x0001be    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
-            __zero_memory   0x000182    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                _do_cinit   0x0000e4    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+       ___return_lbl00001   0x0002aa    program     static                          
+       ___return_lbl00002   0x00026e    program     static                          
+       ___return_lbl00004   0x0001be    program     static                          
+               __config_0   0x300002    program     static C:\Users\franc\Desktop\Semaforo Pedestre\Semaforo.X\newmain.c
+               __config_1   0x300003    program     static C:\Users\franc\Desktop\Semaforo Pedestre\Semaforo.X\newmain.c
+               __config_2   0x300005    program     static C:\Users\franc\Desktop\Semaforo Pedestre\Semaforo.X\newmain.c
+               __config_3   0x300006    program     static C:\Users\franc\Desktop\Semaforo Pedestre\Semaforo.X\newmain.c
+                   __init   0x0002ac    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+            __zero_memory   0x000270    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                _do_cinit   0x0001d2    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                    _entry   0x000000    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                 _startup   0x0001a2    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                compare_l   0x000198    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                copy_loop   0x000156    program     static                          
-            copy_one_byte   0x00015c    program     static                          
-                 delay_ms   0x000078    program     extern C:\Users\franc\Documents\FACULDADE\ATIVIDADES\Micro\Microcontroladores\Semaforo PIC18F4550\Opcao1\Semaforo.X\newmain.c
-                     done   0x000180    program     static                          
-             done_copying   0x00016a    program     static                          
-                     loop   0x0001b2    program     static                          
-                   loop_h   0x000190    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                   loop_l   0x00019a    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                     main   0x000008    program     extern C:\Users\franc\Documents\FACULDADE\ATIVIDADES\Micro\Microcontroladores\Semaforo PIC18F4550\Opcao1\Semaforo.X\newmain.c
-                     test   0x0000fe    program     static                          
-               zero_block   0x000190    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                 _startup   0x000290    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                compare_l   0x000286    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                copy_loop   0x000244    program     static                          
+            copy_one_byte   0x00024a    program     static                          
+                 delay_ms   0x000166    program     extern C:\Users\franc\Desktop\Semaforo Pedestre\Semaforo.X\newmain.c
+                     done   0x00026e    program     static                          
+             done_copying   0x000258    program     static                          
+              interrupcao   0x000008    program     extern C:\Users\franc\Desktop\Semaforo Pedestre\Semaforo.X\newmain.c
+                     loop   0x0002a0    program     static                          
+                   loop_h   0x00027e    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                   loop_l   0x000288    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                     main   0x0000ee    program     extern C:\Users\franc\Desktop\Semaforo Pedestre\Semaforo.X\newmain.c
+                     test   0x0001ec    program     static                          
+               zero_block   0x00027e    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    ADCON0   0x000fc2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                ADCON0bits   0x000fc2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    ADCON1   0x000fc1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
@@ -334,31 +346,36 @@ Linker Map File - Created Sat Mar 07 19:00:25 2020
                 ---------  ---------  ---------  --------- ---------                
                    _entry   0x000000    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
        ___return_lbl00000   0x000004    program     static                          
-                     main   0x000008    program     extern C:\Users\franc\Documents\FACULDADE\ATIVIDADES\Micro\Microcontroladores\Semaforo PIC18F4550\Opcao1\Semaforo.X\newmain.c
-                 delay_ms   0x000078    program     extern C:\Users\franc\Documents\FACULDADE\ATIVIDADES\Micro\Microcontroladores\Semaforo PIC18F4550\Opcao1\Semaforo.X\newmain.c
-          ___for_lbl00009   0x000084    program     static                          
-          ___for_lbl00008   0x00009a    program     static                          
-          ___for_lbl00006   0x0000b4    program     static                          
-          ___for_lbl00007   0x0000be    program     static                          
-          ___for_lbl00004   0x0000c4    program     static                          
-       ___return_lbl00003   0x0000d0    program     static                          
-          ___for_lbl00005   0x0000d0    program     static                          
-                _do_cinit   0x0000e4    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     test   0x0000fe    program     static                          
-                copy_loop   0x000156    program     static                          
-            copy_one_byte   0x00015c    program     static                          
-             done_copying   0x00016a    program     static                          
-                     done   0x000180    program     static                          
-       ___return_lbl00002   0x000180    program     static                          
-            __zero_memory   0x000182    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                   loop_h   0x000190    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-               zero_block   0x000190    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                compare_l   0x000198    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                   loop_l   0x00019a    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                 _startup   0x0001a2    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     loop   0x0001b2    program     static                          
-       ___return_lbl00001   0x0001bc    program     static                          
-                   __init   0x0001be    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+              interrupcao   0x000008    program     extern C:\Users\franc\Desktop\Semaforo Pedestre\Semaforo.X\newmain.c
+                     main   0x0000ee    program     extern C:\Users\franc\Desktop\Semaforo Pedestre\Semaforo.X\newmain.c
+                 delay_ms   0x000166    program     extern C:\Users\franc\Desktop\Semaforo Pedestre\Semaforo.X\newmain.c
+          ___for_lbl00010   0x000172    program     static                          
+          ___for_lbl00009   0x000188    program     static                          
+          ___for_lbl00007   0x0001a2    program     static                          
+          ___for_lbl00008   0x0001ac    program     static                          
+          ___for_lbl00005   0x0001b2    program     static                          
+          ___for_lbl00006   0x0001be    program     static                          
+       ___return_lbl00004   0x0001be    program     static                          
+                _do_cinit   0x0001d2    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     test   0x0001ec    program     static                          
+                copy_loop   0x000244    program     static                          
+            copy_one_byte   0x00024a    program     static                          
+             done_copying   0x000258    program     static                          
+                     done   0x00026e    program     static                          
+       ___return_lbl00002   0x00026e    program     static                          
+            __zero_memory   0x000270    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+               zero_block   0x00027e    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                   loop_h   0x00027e    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                compare_l   0x000286    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                   loop_l   0x000288    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                 _startup   0x000290    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     loop   0x0002a0    program     static                          
+       ___return_lbl00001   0x0002aa    program     static                          
+                   __init   0x0002ac    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+               __config_0   0x300002    program     static C:\Users\franc\Desktop\Semaforo Pedestre\Semaforo.X\newmain.c
+               __config_1   0x300003    program     static C:\Users\franc\Desktop\Semaforo Pedestre\Semaforo.X\newmain.c
+               __config_2   0x300005    program     static C:\Users\franc\Desktop\Semaforo Pedestre\Semaforo.X\newmain.c
+               __config_3   0x300006    program     static C:\Users\franc\Desktop\Semaforo Pedestre\Semaforo.X\newmain.c
                      SIGN   0x000000       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
             __FPFLAGSbits   0x000001       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
                 __FPFLAGS   0x000001       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
