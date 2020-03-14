@@ -5,11 +5,11 @@
 
 
 #define _XTAL_FREQ 40000000 //clock frequencia processador
-#define NOP() {_asm nop _endasm} //nop para funcao delay
+
 
 #define SEMAFORO PORTDbits 
 
-void delay_ms(unsigned int duration);
+
 
 
 
@@ -27,7 +27,7 @@ void main() {
 		SEMAFORO.RD5 = 0; // RD5 Verde2
 		SEMAFORO.RD4 = 0; //RD4 Amarelo2
 		SEMAFORO.RD3 = 1; //Vermelho2
-		delay_ms(1000);
+		Delay10KTCYx(100);
 		
 		SEMAFORO.RD2 = 0; //RD2 Verde1
 		SEMAFORO.RD1 = 1; //RD1 Amarelo1
@@ -35,7 +35,7 @@ void main() {
 		SEMAFORO.RD5 = 0; // RD5 Verde2
 		SEMAFORO.RD4 = 0; //RD4 Amarelo2
 		SEMAFORO.RD3 = 1; //Vermelho2
-		delay_ms(1000);
+		Delay10KTCYx(100);
 		
 		SEMAFORO.RD2 = 0; //RD2 Verde1
 		SEMAFORO.RD1 = 0; //RD1 Amarelo1
@@ -43,7 +43,7 @@ void main() {
 		SEMAFORO.RD5 = 0; // RD5 Verde2
 		SEMAFORO.RD4 = 0; //RD4 Amarelo2
 		SEMAFORO.RD3 = 1; //Vermelho2
-		delay_ms(1000);
+		Delay10KTCYx(100);
 		
 		SEMAFORO.RD2 = 0; //RD2 Verde1
 		SEMAFORO.RD1 = 0; //RD1 Amarelo1
@@ -51,7 +51,7 @@ void main() {
 		SEMAFORO.RD5 = 1; // RD5 Verde2
 		SEMAFORO.RD4 = 0; //RD4 Amarelo2
 		SEMAFORO.RD3 = 0; //Vermelho2
-		delay_ms(1000);
+		Delay10KTCYx(100);
 		
         
 		SEMAFORO.RD2 = 0; //RD2 Verde1
@@ -60,7 +60,7 @@ void main() {
 		SEMAFORO.RD5 = 0; // RD5 Verde2
 		SEMAFORO.RD4 = 1; //RD4 Amarelo2
 		SEMAFORO.RD3 = 0; //Vermelho2
-		delay_ms(1000);
+		Delay10KTCYx(100);
 		
 		SEMAFORO.RD2 = 0; //RD2 Verde1
 		SEMAFORO.RD1 = 0; //RD1 Amarelo1
@@ -68,24 +68,9 @@ void main() {
 		SEMAFORO.RD5 = 0; // RD5 Verde2
 		SEMAFORO.RD4 = 0; //RD4 Amarelo2
 		SEMAFORO.RD3 = 1; //Vermelho2
-		delay_ms(1000);
+		Delay10KTCYx(100);
          
 	}
 
 }
 
-//funcao delay
-void delay_ms(unsigned int duration) {
-	unsigned int i;
-	for(;duration!=0;duration--)
-	{
-		for(i=0;i<=50;i++){
-			NOP();
-			NOP();
-			NOP();
-		}
-			NOP();
-			NOP();
-			NOP();
-	}
-}

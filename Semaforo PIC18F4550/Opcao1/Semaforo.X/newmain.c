@@ -2,7 +2,6 @@
 #include <p18F4550.h>
 
 #define _XTAL_FREQ 40000000 //frequencia de clock do processador
-#define NOP() {_asm nop _endasm} //nop para funcao delay
 
 #define SEMAFORO PORTD //porta de entrada no processador (porta D)
 
@@ -16,12 +15,6 @@
 
 
 
-
-void delay_ms(unsigned int duration);
-
-
-
-
 void main() {
 	
 	TRISD = 0x00;
@@ -29,34 +22,19 @@ void main() {
 	
 	while(1){
         SEMAFORO = VERDE1;
-        delay_ms(1000);
+        Delay10KTCYx(100);
         SEMAFORO = AMARELO1;
-        delay_ms(1000);
+        Delay10KTCYx(100);
         SEMAFORO = VERMELHOTOTAL;
-        delay_ms(1000);
+        Delay10KTCYx(100);
         SEMAFORO = VERDE2;
-        delay_ms(1000);
+        Delay10KTCYx(100);
         SEMAFORO = AMARELO2;
-        delay_ms(1000);
+        Delay10KTCYx(100);
         SEMAFORO = VERMELHOTOTAL;
-        delay_ms(1000);
+        Delay10KTCYx(100);
         
 	} 
 
 }
 
-//funcao delay
-void delay_ms(unsigned int duration) {
-	unsigned int i;
-	for(;duration!=0;duration--)
-	{
-		for(i=0;i<=50;i++){
-			NOP();
-			NOP();
-			NOP();
-		}
-			NOP();
-			NOP();
-			NOP();
-	}
-}

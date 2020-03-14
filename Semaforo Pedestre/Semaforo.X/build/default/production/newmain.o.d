@@ -1,3 +1,3 @@
 build/default/production/newmain.o:  \
-	C:/Users/franc/Desktop/Semaforo\ Pedestre/Semaforo.X/newmain.c  \
+	C:/Users/franc/Documents/FACULDADE/ATIVIDADES/Micro/Microcontroladores/Semaforo\ Pedestre/Semaforo.X/newmain.c  \
 

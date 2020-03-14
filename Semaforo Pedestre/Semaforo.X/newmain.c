@@ -15,7 +15,7 @@
 
 
 #define _XTAL_FREQ 40000000 //frequencia de clock do processador
-#define NOP() {_asm nop _endasm} //nop para funcao delay
+
 
 #define SEMAFORO PORTD //porta de entrada no processador (porta D)
 #define BOTAO PORTBbits.RB0
@@ -30,21 +30,20 @@
 #define ATENCAO 0b0000001001
 
 
-void delay_ms(unsigned int duration);
 
 
 void interrupcao(void){
     INTCONbits.INT0IF = 0; //Limpa o flag de interrupção externa
     SEMAFORO = PEDESTRE;
-    delay_ms(2000);
+    Delay10KTCYx(200);
     SEMAFORO = ATENCAO;
-    delay_ms(200);
+    Delay10KTCYx(20);
     SEMAFORO = PEDESTRE;
-    delay_ms(200);
+    Delay10KTCYx(20);
     SEMAFORO = ATENCAO;
-    delay_ms(200);
+    Delay10KTCYx(20);
     SEMAFORO = PEDESTRE;
-    delay_ms(200);
+    Delay10KTCYx(20);
 }
 
 
@@ -60,36 +59,20 @@ void main() {
 	
 	while(1){
         SEMAFORO = VERDE1;
-        delay_ms(1000);
+        Delay10KTCYx(100);
         SEMAFORO = AMARELO1;
-        delay_ms(1000);
+        Delay10KTCYx(100);
         SEMAFORO = VERMELHOTOTAL;
-        delay_ms(1000);
+        Delay10KTCYx(100);
         SEMAFORO = VERDE2;
-        delay_ms(1000);
+        Delay10KTCYx(100);
         SEMAFORO = AMARELO2;
-        delay_ms(1000);
+        Delay10KTCYx(100);
         SEMAFORO = VERMELHOTOTAL;
-        delay_ms(1000);
+        Delay10KTCYx(100);
     
 	} 
 
-}
-
-//funcao delay
-void delay_ms(unsigned int duration) {
-	unsigned int i;
-	for(;duration!=0;duration--)
-	{
-		for(i=0;i<=50;i++){
-			NOP();
-			NOP();
-			NOP();
-		}
-			NOP();
-			NOP();
-			NOP();
-	}
 }
 
 
