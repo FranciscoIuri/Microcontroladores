@@ -11,7 +11,6 @@
 #pragma config LVP = OFF   //Desabilita o Low Voltage Program.
 
 #define botao PORTBbits.RB0
-
 #define display PORTD
 
 //gfedcba
